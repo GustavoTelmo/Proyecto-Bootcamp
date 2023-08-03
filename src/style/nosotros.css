@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0; 
+}
+.contorno{
+    margin-top: 900px;
+    margin-right: 500px;
+    width: 50%;
+    font-size:40px;
+    background-color: chartreuse;
+    border: 10px solid black;
+
+
+}
