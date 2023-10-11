@@ -9,7 +9,7 @@ function Layout() {
       <div className={`nav-items ${isOpen && "open"}`}>
         <Link to="/">Home</Link>
         <Link to="/contact">Contacto</Link>
-        <Link to="/form">Alta</Link>
+        <Link to="/alta">Alta</Link>
         <Link to="/nosotros">Nosotros</Link>
       </div>
       <div

@@ -4,7 +4,7 @@ import "./App.css";
 import Layout from "./layout/Layout";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home"
-import Alta from "./components/Alta";
+import Alta from "./pages/Alta";
 import Nosotros from "./pages/Nosotros"
 
 
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Layout />}>
          <Route path="/" element={<Home />} />
            <Route path="contact" element={<Contact />} />
-           <Route path="form" element={<Alta />} />
+           <Route path="alta" element={<Alta />} />
            <Route path="nosotros" element={<Nosotros />} />
         </Route>
       </Routes>

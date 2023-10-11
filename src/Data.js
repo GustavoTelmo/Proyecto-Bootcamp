@@ -1,4 +1,5 @@
-export const Data = [
+
+/*export const Data = [
     {  
         id: 1,
         title: "Notebook",                                   
@@ -108,4 +109,4 @@ export const Data = [
         
     }
     
-]
+]*/

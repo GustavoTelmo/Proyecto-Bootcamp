@@ -1,4 +1,4 @@
-import { Data } from "../Data";
+import { useState, useEffect } from "react";
 
 export const Card = ({
   allProducts,
@@ -8,6 +8,14 @@ export const Card = ({
   total,
   setTotal,
 }) => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:8000/api/cards")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+
   const onAddProduct = (product) => {
     if (allProducts.find((item) => item.id === product.id)) {
       const products = allProducts.map((item) =>
@@ -18,14 +26,14 @@ export const Card = ({
       return setAllProducts([...products]);
     }
 
-    setTotal(total + product.price * product.quantity);
-    setCountProducts(countProducts + product.quantity);
-    setAllProducts([...allProducts, product]);
-  };
+      setTotal(total + product.price * product.quantity);
+      setCountProducts(countProducts + product.quantity);
+      setAllProducts([...allProducts, product]);
+    };
 
   return (
     <div className="container-items">
-      {Data.map((product) => (
+      {data?.map((product) => (
         <div className="item" key={product.id}>
           <figure>
             <img src={product.image} alt={product.title} />
